@@ -102,6 +102,7 @@ export default function Login(){
                         value={formData.email}
                         invalid={errors.email}
                     />
+                    { errors.email && <FormFeedback> Mail adresini kontrol ediniz. </FormFeedback> }
                     
                 </FormGroup>
 
@@ -118,6 +119,7 @@ export default function Login(){
                         value={formData.password}
                         invalid={errors.password}
                     />
+                     { errors.password && <FormFeedback> Parola min 8, Büyük Harf, Küçük Harf, Sayı, Özel Karakter </FormFeedback> }
                 </FormGroup>
 
                   <FormGroup>
@@ -131,6 +133,7 @@ export default function Login(){
                         onChange={handleChange}
                         invalid = {errors.term}
                     />
+                    { errors.term && <FormFeedback> Şartları kabul ediniz </FormFeedback> }
                 </FormGroup>
 
                 <Button disabled={!isValid} type="submit">Giriş Yap</Button>
